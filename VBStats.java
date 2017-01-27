@@ -13,7 +13,7 @@ public class VBStats {
 		team.insert("ma", "Manley", "OH");
 		team.insert("lm", "Lake", "OH");
 		team.insert("kd", "Kyle D.", "OH");
-		team.insert("gg", "Gino", "OH");
+		// team.insert("gg", "Gino", "OH");
 		team.insert("jh", "Howard", "OPP");
 		team.insert("jf", "Fort", "MB");
 		team.insert("rc", "Ray", "MB");
@@ -300,13 +300,13 @@ public class VBStats {
 				JOptionPane.showMessageDialog(null, statsPartFour(hitTeam));
 				System.out.println("Here are the abbreviated stats:\n" + hitTeam.totalStatLine());
 				statSheet = new PrintWriter(new FileWriter(fileName));
-				shortSheet = new PrintWriter(new FileWriter("short" + fileName));
+				// shortSheet = new PrintWriter(new FileWriter("short" + fileName));
 				logSheet = new PrintWriter(new FileWriter("playHistory" + fileName));
 				statSheet.println("Name (nickname), kills, serve receive, blocking, serving, digs, assists, ball handling errors, total points, total errors\n" + hitTeam.totalStatLine() + "Here are your statistical leaders for the day\n\n"  + statLeaders(hitTeam));
-				shortSheet.println("Here are the abbreviated stats:\n" + basicStatPage(team) + "\n" + hitTeam.totalStatLine());
+				// shortSheet.println("Here are the abbreviated stats:\n" + basicStatPage(team) + "\n" + hitTeam.totalStatLine());
 				logSheet.print(history);
 				statSheet.close();
-				shortSheet.close();
+				// shortSheet.close();
 				logSheet.close();
 				return;
 			}
@@ -615,14 +615,14 @@ public class VBStats {
 				System.out.println(history.back());
 
 				statSheet = new PrintWriter(new FileWriter(fileName));
-				shortSheet = new PrintWriter(new FileWriter("short" + fileName));
+				// shortSheet = new PrintWriter(new FileWriter("short" + fileName));
 				logSheet = new PrintWriter(new FileWriter("playHistory" + fileName));
 
 				statSheet.println("Name (nickname), kills, serve receive, blocking, serving, digs, assists, ball handling errors, total points, total errors\n" + hitTeam.totalStatLine() + "Here are your statistical leaders for the day\n\n"  + statLeaders(hitTeam));
 				shortSheet.println("Here are the abbreviated stats:\n" + basicStatPage(team) + "\n" + hitTeam.totalStatLine());
 				logSheet.print(history);
 				statSheet.close();
-				shortSheet.close();
+				// shortSheet.close();
 				logSheet.close();
 
 				answer = "";
